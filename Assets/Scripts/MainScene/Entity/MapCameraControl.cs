@@ -23,5 +23,8 @@ public class MapCameraControl : MonoBehaviour
 
         Vector3 pos = new Vector3(target.position.x, target.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime);
+
+        if ((transform.position - pos).magnitude < 0.01f)
+            transform.position = pos;
     }
 }
