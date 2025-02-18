@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get => GM; }
 
     int currentScore = 0;
+    public int CurrentScore => currentScore;
 
     UIManager UM;
     public UIManager UIManager { get => UM; }
@@ -21,14 +22,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        UM.UpdateScore(0);
         Time.timeScale = 0f;
     }
 
     public void GameOver()
     {
         Debug.Log("GameOver");
-        UM.SetRestart();
+        UM.SetScoreUI();
     }
 
     public void RestartGame()
@@ -39,8 +39,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         currentScore += score;
-        UM.UpdateScore(currentScore);
-        UM.UpdateScore(currentScore);
+        UM.UpdateScore();
         Debug.Log("Score : " + currentScore);
     }
 }
