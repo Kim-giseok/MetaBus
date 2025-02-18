@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("GameOver");
+        bestScore = bestScore < currentScore ? currentScore : bestScore;
+        PlayerPrefs.SetInt(BestScoreKey, bestScore);
+
         UM.SetScoreUI();
     }
 
@@ -44,8 +47,6 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         currentScore += score;
-        bestScore = bestScore < currentScore ? currentScore : bestScore;
-        PlayerPrefs.SetInt(BestScoreKey, bestScore);
 
         UM.UpdateScore();
         Debug.Log("Score : " + currentScore);
