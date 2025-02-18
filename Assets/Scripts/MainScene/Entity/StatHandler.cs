@@ -15,15 +15,6 @@ public class StatHandler : MonoBehaviour
     public float Speed
     {
         get => speed;
-        set => speed = Mathf.Clamp(value, 0, 20);         
-    }
-
-    [SerializeField] AnimatorOverrideController anim;
-    [SerializeField] AnimationClip idle, move;
-
-    private void Start()
-    {
-        anim["Idle"] = idle;
-        anim["Move"] = move;
+        set => speed = Mathf.Clamp(value, 0, 20);
     }
 }

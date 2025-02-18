@@ -10,6 +10,8 @@ public class PlayerResource : MonoBehaviour
     [SerializeField] Slider GreenSlider;
     [SerializeField] Slider BlueSlider;
 
+
+
     private void Awake()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
