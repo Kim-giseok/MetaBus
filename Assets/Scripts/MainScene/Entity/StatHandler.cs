@@ -17,4 +17,23 @@ public class StatHandler : MonoBehaviour
         get => speed;
         set => speed = Mathf.Clamp(value, 0, 20);         
     }
+
+    [Range(0, 255)][SerializeField] int red = 255;
+    public int Red
+    {
+        get => red;
+        set => red = Mathf.Clamp(value, 0, 255);
+    }
+    [Range(0, 255)][SerializeField] int green = 255;
+    public int Green
+    {
+        get => green;
+        set => green = Mathf.Clamp(value, 0, 255);
+    }
+    [Range(0, 255)][SerializeField] int blue = 255;
+    public int Blue
+    {
+        get => blue;
+        set => blue = Mathf.Clamp(value, 0, 255);
+    }
 }
