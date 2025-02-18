@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerResource : MonoBehaviour
 {
     SpriteRenderer sprite;
-    StatHandler stat;
+    [SerializeField] Slider RedSlider;
+    [SerializeField] Slider GreenSlider;
+    [SerializeField] Slider BlueSlider;
 
     private void Awake()
     {
-        stat = GetComponent<StatHandler>();
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        sprite.color = new Color(stat.Red, stat.Green, stat.Blue);
+        RedSlider.onValueChanged.AddListener(delegate { ColorChange(); });
+        GreenSlider.onValueChanged.AddListener(delegate { ColorChange(); });
+        BlueSlider.onValueChanged.AddListener(delegate { ColorChange(); });
+    }
+
+    public void ColorChange()
+    {
+        sprite.color = new Color(RedSlider.value, GreenSlider.value, BlueSlider.value);
     }
 }
