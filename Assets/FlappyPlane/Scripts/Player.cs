@@ -40,10 +40,6 @@ public class Player : MonoBehaviour
         {
             if (deathCooldown <= 0)
             {
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-                {
-                    GM.RestartGame();
-                }
             }
             else
             {
