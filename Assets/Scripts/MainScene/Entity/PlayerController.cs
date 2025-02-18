@@ -17,7 +17,7 @@ public class PlayerController : BaseController
     void OnMove(InputValue inputValue)
     {
         moveDir = inputValue.Get<Vector2>();
+        lookDir = moveDir.magnitude >= 1 ? moveDir : lookDir;
         moveDir = moveDir.normalized;
-        lookDir = moveDir;
     }
 }
