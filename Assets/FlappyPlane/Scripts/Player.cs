@@ -38,13 +38,10 @@ public class Player : MonoBehaviour
     {
         if (isDead)
         {
-            if (deathCooldown <= 0)
-            {
-            }
-            else
-            {
+            if (deathCooldown > 0)
                 deathCooldown -= Time.deltaTime;
-            }
+            else
+                GM.GameOver();
         }
         else
         {
@@ -82,6 +79,5 @@ public class Player : MonoBehaviour
         deathCooldown = 1f;
 
         animator.SetInteger("isDie", 1);
-        GM.GameOver();
     }
 }

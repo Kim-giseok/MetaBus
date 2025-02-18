@@ -15,6 +15,6 @@ public class StatHandler : MonoBehaviour
     public float Speed
     {
         get => speed;
-        set => speed = Mathf.Clamp(value, 0, 20);         
+        set => speed = Mathf.Clamp(value, 0, 20);
     }
 }
