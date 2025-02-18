@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI restartTxt;
+    public Image ReadyImg;
 
     public void Start()
     {
@@ -22,6 +24,13 @@ public class UIManager : MonoBehaviour
             return;
         }
 
+        if (ReadyImg == null)
+        {
+            Debug.LogError("readyImg is null");
+            return;
+        }
+
+        ReadyImg.gameObject.SetActive(true);
         restartTxt.gameObject.SetActive(false);
     }
 
@@ -33,5 +42,11 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         scoreTxt.text = score.ToString();
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1f;
+        ReadyImg.gameObject.SetActive(false);
     }
 }

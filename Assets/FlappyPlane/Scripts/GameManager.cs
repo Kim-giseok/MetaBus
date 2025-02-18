@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UM.UpdateScore(0);
+        Time.timeScale = 0f;
     }
 
     public void GameOver()
