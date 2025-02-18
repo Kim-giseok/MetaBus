@@ -21,8 +21,8 @@ public class ScoreUI : BaseUI
         startBtn = transform.Find("StartBtn").GetComponent<Button>();
         exitBtn = transform.Find("ExitBtn").GetComponent<Button>();
 
-        startBtn.onClick.AddListener(OnClickStartBtn);
-        exitBtn.onClick.AddListener(OnClickExitBtn);
+        startBtn?.onClick.AddListener(OnClickStartBtn);
+        exitBtn?.onClick.AddListener(OnClickExitBtn);
     }
 
     public void SetUI(int score, int bestScore)

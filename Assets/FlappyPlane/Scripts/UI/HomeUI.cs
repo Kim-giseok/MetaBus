@@ -15,7 +15,7 @@ public class HomeUI : BaseUI
 
         startBtn = transform.Find("StartBtn").GetComponent<Button>();
 
-        startBtn.onClick.AddListener(OnClickStartBtn);
+        startBtn?.onClick.AddListener(OnClickStartBtn);
     }
 
     void OnClickStartBtn()
