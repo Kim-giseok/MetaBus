@@ -62,7 +62,7 @@ public class UIManager : MonoBehaviour
 
     public void SetScoreUI()
     {
-        scoreUI.SetUI(GameManager.instance.CurrentScore, GameManager.instance.CurrentScore);
+        scoreUI.SetUI(GameManager.instance.CurrentScore, GameManager.instance.BestScore);
         ChangeState(UIState.Score);
     }
 }

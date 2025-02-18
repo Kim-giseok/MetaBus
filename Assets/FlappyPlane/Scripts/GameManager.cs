@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     int currentScore = 0;
     public int CurrentScore => currentScore;
 
+    int bestScore;
+    public int BestScore => bestScore;
+    const string BestScoreKey = "BestScore";
+
     UIManager UM;
     public UIManager UIManager { get => UM; }
 
@@ -23,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 0f;
+        bestScore = PlayerPrefs.GetInt(BestScoreKey, 0);
     }
 
     public void GameOver()
@@ -39,6 +44,9 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         currentScore += score;
+        bestScore = bestScore < currentScore ? currentScore : bestScore;
+        PlayerPrefs.SetInt(BestScoreKey, bestScore);
+
         UM.UpdateScore();
         Debug.Log("Score : " + currentScore);
     }
