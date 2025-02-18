@@ -395,9 +395,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 3
-  anim: {fileID: 22100000, guid: d683c37700346e94d981b699a5d07d46, type: 2}
-  idle: {fileID: 7400000, guid: ac328593327514b4d99df2933463d9ad, type: 2}
-  move: {fileID: 7400000, guid: 7a869b1617dfcd84d81ae704b823e580, type: 2}
 --- !u!114 &150981636
 MonoBehaviour:
   m_ObjectHideFlags: 0
