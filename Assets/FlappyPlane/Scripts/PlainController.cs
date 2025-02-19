@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlainController : BaseController
 {
-    Animator animator;
-
     public float flapForce = 6f;
     public float forwordSpeed = 3f;
     public bool isDead = false;
@@ -22,9 +20,6 @@ public class PlainController : BaseController
     protected override void Awake()
     {
         base.Awake();
-        animator = GetComponentInChildren<Animator>();
-        if (animator == null)
-            Debug.LogError("Not Founded Animator");
 
         if (_rig == null)
             Debug.LogError("Not Founded Rigidbody");
@@ -82,6 +77,6 @@ public class PlainController : BaseController
         isDead = true;
         deathCooldown = 1f;
 
-        animator.SetInteger("isDie", 1);
+        animHandller?.Die();
     }
 }
