@@ -56,16 +56,16 @@ public class PlainController : BaseController
     {
         if (isDead) return;
 
-        Vector3 velocity = _rig.velocity;
-        velocity.x = forwordSpeed;
+        moveDir = _rig.velocity;
+        moveDir.x = forwordSpeed;
 
         if (isFlap)
         {
-            velocity.y += flapForce;
+            moveDir.y += flapForce;
             isFlap = false;
         }
 
-        _rig.velocity = velocity;
+        _rig.velocity = moveDir;
 
         float angle = Mathf.Clamp(_rig.velocity.y * 10, -90, 90);
         transform.rotation = Quaternion.Euler(0, 0, angle);
