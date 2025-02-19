@@ -46,11 +46,13 @@ public class PlayerController : BaseController
             rideHandler = Instantiate(ridePrefeb, ridePivot);
             rideHandler.Init(lookDir);
             statHanddler.Speed = rideHandler.GetComponent<StatHandler>().Speed;
+            characterRenderer.transform.localPosition += ridePivot.localPosition;
         }
         else
         {
             Destroy(rideHandler.gameObject);
             statHanddler.Speed = baseSpeed;
+            characterRenderer.transform.localPosition -= ridePivot.localPosition;
         }
     }
 }

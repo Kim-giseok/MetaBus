@@ -6,7 +6,7 @@ public class BaseController : MonoBehaviour
 {
     protected Rigidbody2D _rig;
 
-    [SerializeField] SpriteRenderer characterRenderer;
+    [SerializeField] protected SpriteRenderer characterRenderer;
 
     protected Vector2 moveDir = Vector2.zero;
     public Vector2 MoveDir => moveDir;
