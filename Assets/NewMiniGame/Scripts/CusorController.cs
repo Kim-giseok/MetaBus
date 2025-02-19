@@ -7,6 +7,8 @@ public class CusorController : MonoBehaviour
 {
     Camera camera;
 
+    bool isAttack = false;
+
     void Start()
     {
         camera = Camera.main;
@@ -18,5 +20,16 @@ public class CusorController : MonoBehaviour
         Vector2 worldPos = camera.ScreenToWorldPoint(mousePosition);
 
         transform.position = worldPos;
+    }
+
+    void OnFire(InputValue inputValue)
+    {
+        isAttack = inputValue.isPressed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isAttack)
+            Destroy(collision.gameObject);
     }
 }
