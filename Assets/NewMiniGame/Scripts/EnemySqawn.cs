@@ -19,6 +19,7 @@ public class EnemySqawn : MonoBehaviour
         {
             curTime = 0;
             GameManager.instance.GameOver();
+            Destroy(gameObject);
             return;
         }
         curTime -= Time.deltaTime;
@@ -41,6 +42,7 @@ public class EnemySqawn : MonoBehaviour
         _rigEnemy = Instantiate(enemyPrefebs[Random.Range(0, enemyPrefebs.Length)], this.transform).GetComponent<Rigidbody2D>();
 
         _rigEnemy.transform.localPosition += new Vector3(Random.Range(-4, 4), 0, 0);
+        _rigEnemy.angularVelocity = Random.Range(-10, 10);
         _rigEnemy.AddForce(Vector2.up * Random.Range(600f, 800f));
     }
 
