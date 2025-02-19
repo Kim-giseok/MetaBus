@@ -20,4 +20,10 @@ public class PlayerController : BaseController
         lookDir = moveDir.magnitude >= 1 ? moveDir : lookDir;
         moveDir = moveDir.normalized;
     }
+
+    void OnFire(InputValue inputValue)
+    {
+        if (inputValue.isPressed)
+            animHandller.RideOn();
+    }
 }
