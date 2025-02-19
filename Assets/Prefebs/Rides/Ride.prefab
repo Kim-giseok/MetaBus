@@ -4897,9 +4897,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1281589658272205685}
+  - component: {fileID: 7527380759720700043}
   - component: {fileID: 8129455771370825846}
   - component: {fileID: 1452014888495697035}
-  - component: {fileID: 7527380759720700043}
   - component: {fileID: -7198179264277598137}
   m_Layer: 0
   m_Name: Ride
@@ -4925,31 +4925,6 @@ Transform:
   - {fileID: 626472693530551931}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8129455771370825846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5824609528913820731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 122a5a12fdddbf4488cb1dd0117baa41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterRenderer: {fileID: 3756915144870584196}
---- !u!114 &1452014888495697035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5824609528913820731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42e247bac2cf1243869653e904b9a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7527380759720700043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4980,6 +4955,31 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8129455771370825846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824609528913820731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122a5a12fdddbf4488cb1dd0117baa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterRenderer: {fileID: 3756915144870584196}
+--- !u!114 &1452014888495697035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824609528913820731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42e247bac2cf1243869653e904b9a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-7198179264277598137
 MonoBehaviour:
   m_ObjectHideFlags: 0
