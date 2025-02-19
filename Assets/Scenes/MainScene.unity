@@ -336,6 +336,7 @@ Transform:
   m_Children:
   - {fileID: 1351465488}
   - {fileID: 1056624670}
+  - {fileID: 306793162}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &150981633
@@ -381,6 +382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 1351465489}
+  ridePivot: {fileID: 306793162}
+  ridePrefeb: {fileID: 8129455771370825846, guid: 5f88ded505a05ea48ab2013e54b4fe00, type: 3}
 --- !u!114 &150981635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,9 +398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speed: 3
-  anim: {fileID: 22100000, guid: d683c37700346e94d981b699a5d07d46, type: 2}
-  idle: {fileID: 7400000, guid: ac328593327514b4d99df2933463d9ad, type: 2}
-  move: {fileID: 7400000, guid: 7a869b1617dfcd84d81ae704b823e580, type: 2}
 --- !u!114 &150981636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3000,6 +3000,37 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &306793161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306793162}
+  m_Layer: 0
+  m_Name: RidePivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &306793162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306793161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 150981632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342586551
 GameObject:
   m_ObjectHideFlags: 0

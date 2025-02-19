@@ -6,7 +6,7 @@ public class BaseController : MonoBehaviour
 {
     protected Rigidbody2D _rig;
 
-    [SerializeField] SpriteRenderer characterRenderer;
+    [SerializeField] protected SpriteRenderer characterRenderer;
 
     protected Vector2 moveDir = Vector2.zero;
     public Vector2 MoveDir => moveDir;
@@ -48,9 +48,11 @@ public class BaseController : MonoBehaviour
 
     protected virtual void Movement(Vector2 dir)
     {
-        dir *= statHanddler.Speed;
+        if (statHanddler != null)
+            dir *= statHanddler.Speed;
 
-        _rig.velocity = dir;
+        if (_rig != null)
+            _rig.velocity = dir;
         animHandller.Move(dir);
     }
 
