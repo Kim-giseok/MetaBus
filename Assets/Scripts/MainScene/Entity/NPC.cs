@@ -15,13 +15,13 @@ public class NPC : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (txt != null && collision.gameObject.name == "Player")
+        if (txt != null && collision.gameObject.CompareTag("Player"))
             txt.SetActive(true);
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (txt != null && collision.gameObject.name == "Player")
+        if (txt != null && collision.gameObject.CompareTag("Player"))
             txt.SetActive(false);
     }
 }
