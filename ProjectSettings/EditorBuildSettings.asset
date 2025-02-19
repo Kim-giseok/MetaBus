@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FlappyPlane/Scenes/FlappyPlane.unity
     guid: 82b049dfdf1ea6146aecbecdc5287f1b
+  - enabled: 1
+    path: Assets/NewMiniGame/Scenes/NewMiniGame.unity
+    guid: 942642dd8180f044eb64b8b9b9c7110c
   m_configObjects: {}
