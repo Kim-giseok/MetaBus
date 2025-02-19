@@ -2736,7 +2736,7 @@ GameObject:
   - component: {fileID: 279311746}
   - component: {fileID: 279311749}
   m_Layer: 0
-  m_Name: Event2
+  m_Name: Event_MonsterNinja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2926,7 +2926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a0eb82c09b77e4daa8e351bb911b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameName: NewMiniGame
+  gameName: MonsterNinja
 --- !u!1 &279863725
 GameObject:
   m_ObjectHideFlags: 0
@@ -15434,7 +15434,7 @@ GameObject:
   - component: {fileID: 983225803}
   - component: {fileID: 983225806}
   m_Layer: 0
-  m_Name: Event1
+  m_Name: Event_FlappyPlain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
