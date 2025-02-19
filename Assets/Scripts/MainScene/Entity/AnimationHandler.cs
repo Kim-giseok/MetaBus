@@ -6,6 +6,7 @@ public class AnimationHandler : MonoBehaviour
 {
     static readonly int IsMoving = Animator.StringToHash("IsMove");
     static readonly int IsRide = Animator.StringToHash("IsRide");
+    static readonly int IsDie = Animator.StringToHash("isDie");
 
     protected Animator anim;
 
@@ -22,5 +23,10 @@ public class AnimationHandler : MonoBehaviour
     public void RideOn()
     {
         anim.SetBool(IsRide, !anim.GetBool(IsRide));
+    }
+
+    public void Die()
+    {
+        anim.SetBool(IsDie, true);
     }
 }
