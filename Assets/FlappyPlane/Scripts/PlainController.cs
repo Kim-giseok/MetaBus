@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlainController : BaseController
 {
     Animator animator;
-    Rigidbody2D _rigidbody;
 
     public float flapForce = 6f;
     public float forwordSpeed = 3f;
@@ -18,23 +17,24 @@ public class Player : MonoBehaviour
 
     GameManager GM;
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Awake()
     {
-        GM = GameManager.instance;
-
+        base.Awake();
         animator = GetComponentInChildren<Animator>();
-        _rigidbody = GetComponent<Rigidbody2D>();
-
         if (animator == null)
             Debug.LogError("Not Founded Animator");
 
-        if (_rigidbody == null)
+        if (_rig == null)
             Debug.LogError("Not Founded Rigidbody");
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Start()
+    {
+        GM = GameManager.instance;
+        base.Start();
+    }
+
+    protected override void HandleAction()
     {
         if (isDead)
         {
@@ -52,11 +52,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    protected override void Movement(Vector2 dir)
     {
         if (isDead) return;
 
-        Vector3 velocity = _rigidbody.velocity;
+        Vector3 velocity = _rig.velocity;
         velocity.x = forwordSpeed;
 
         if (isFlap)
@@ -65,9 +65,9 @@ public class Player : MonoBehaviour
             isFlap = false;
         }
 
-        _rigidbody.velocity = velocity;
+        _rig.velocity = velocity;
 
-        float angle = Mathf.Clamp(_rigidbody.velocity.y * 10, -90, 90);
+        float angle = Mathf.Clamp(_rig.velocity.y * 10, -90, 90);
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 

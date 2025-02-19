@@ -39,7 +39,7 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Player player = collision.GetComponent<Player>();
+        PlainController player = collision.GetComponent<PlainController>();
         if (player != null)
             GM.AddScore(1);
     }

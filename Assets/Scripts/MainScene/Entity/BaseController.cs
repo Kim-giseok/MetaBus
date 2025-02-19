@@ -53,7 +53,7 @@ public class BaseController : MonoBehaviour
 
         if (_rig != null)
             _rig.velocity = dir;
-        animHandller.Move(dir);
+        animHandller?.Move(dir);
     }
 
     void Rotate(Vector2 dir)
@@ -61,6 +61,7 @@ public class BaseController : MonoBehaviour
         float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         bool isL = Mathf.Abs(rotZ) > 90f;
 
-        characterRenderer.flipX = isL;
+        if (characterRenderer != null)
+            characterRenderer.flipX = isL;
     }
 }
