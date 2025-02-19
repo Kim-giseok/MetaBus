@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6939357840071428139}
   - component: {fileID: 5228894298371994129}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Wogol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
