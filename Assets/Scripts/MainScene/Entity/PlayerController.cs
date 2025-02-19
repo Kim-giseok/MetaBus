@@ -12,11 +12,14 @@ public class PlayerController : BaseController
     [SerializeField] RideController ridePrefeb;
     RideController rideHandler;
 
+    float baseSpeed;
+
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
         mainCamera = Camera.main;
+        baseSpeed = statHanddler.Speed;
     }
 
     void OnMove(InputValue inputValue)
@@ -37,10 +40,14 @@ public class PlayerController : BaseController
                 {
                     rideHandler = Instantiate(ridePrefeb, ridePivot);
                     rideHandler.Init(lookDir);
+                    statHanddler.Speed = rideHandler.GetComponent<StatHandler>().Speed;
                 }
             }
             else
+            {
                 Destroy(rideHandler.gameObject);
+                statHanddler.Speed = baseSpeed;
+            }
         }
     }
 }
