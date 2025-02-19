@@ -65,4 +65,9 @@ public class UIManager : MonoBehaviour
         scoreUI.SetUI(GameManager.instance.CurrentScore, GameManager.instance.BestScore);
         ChangeState(UIState.Score);
     }
+
+    public void UpdateTime(float time, float maxTime)
+    {
+        gameUI?.SetTimeUI(time, maxTime);
+    }
 }

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     int bestScore;
     public int BestScore => bestScore;
-    const string BestScoreKey = "BestScore";
+    string BestScoreKey;
 
     UIManager UM;
     public UIManager UIManager { get => UM; }
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         GM = this;
         UM = FindObjectOfType<UIManager>();
+        BestScoreKey = SceneManager.GetActiveScene().name + "BestScore";
     }
 
     private void Start()
