@@ -2926,7 +2926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98a0eb82c09b77e4daa8e351bb911b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameName: 
+  gameName: NewMiniGame
 --- !u!1 &279863725
 GameObject:
   m_ObjectHideFlags: 0
