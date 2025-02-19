@@ -31,23 +31,26 @@ public class PlayerController : BaseController
 
     void OnFire(InputValue inputValue)
     {
-        if (inputValue.isPressed)
+        if (!inputValue.isPressed)
+            return;
+
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        animHandller.RideOn();
+        if (rideHandler == null)
         {
-            animHandller.RideOn();
-            if (rideHandler == null)
-            {
-                if (ridePrefeb != null)
-                {
-                    rideHandler = Instantiate(ridePrefeb, ridePivot);
-                    rideHandler.Init(lookDir);
-                    statHanddler.Speed = rideHandler.GetComponent<StatHandler>().Speed;
-                }
-            }
-            else
-            {
-                Destroy(rideHandler.gameObject);
-                statHanddler.Speed = baseSpeed;
-            }
+            if (ridePrefeb == null)
+                return;
+
+            rideHandler = Instantiate(ridePrefeb, ridePivot);
+            rideHandler.Init(lookDir);
+            statHanddler.Speed = rideHandler.GetComponent<StatHandler>().Speed;
+        }
+        else
+        {
+            Destroy(rideHandler.gameObject);
+            statHanddler.Speed = baseSpeed;
         }
     }
 }
