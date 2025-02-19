@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CusorController : MonoBehaviour
 {
+    GameManager GM;
     Camera camera;
 
     bool isAttack = false;
@@ -12,6 +13,7 @@ public class CusorController : MonoBehaviour
     void Start()
     {
         camera = Camera.main;
+        GM = GameManager.instance;
     }
 
     void OnLook(InputValue inputValue)
@@ -29,7 +31,11 @@ public class CusorController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (isAttack)
+        {
             Destroy(collision.gameObject);
+            GM.AddScore(1);
+        }
     }
 }
