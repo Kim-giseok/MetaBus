@@ -9,19 +9,18 @@ public class NPC : MonoBehaviour
 
     void Awake()
     {
-        if (txt != null)
-            txt.SetActive(false);
+        txt?.SetActive(false);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (txt != null && collision.gameObject.CompareTag("Player"))
-            txt.SetActive(true);
+        if (collision.gameObject.CompareTag("Player"))
+            txt?.SetActive(true);
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (txt != null && collision.gameObject.CompareTag("Player"))
-            txt.SetActive(false);
+        if (collision.gameObject.CompareTag("Player"))
+            txt?.SetActive(false);
     }
 }
