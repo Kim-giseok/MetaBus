@@ -48,9 +48,11 @@ public class BaseController : MonoBehaviour
 
     protected virtual void Movement(Vector2 dir)
     {
-        dir *= statHanddler.Speed;
+        if (statHanddler != null)
+            dir *= statHanddler.Speed;
 
-        _rig.velocity = dir;
+        if (_rig != null)
+            _rig.velocity = dir;
         animHandller.Move(dir);
     }
 
