@@ -33,8 +33,8 @@ public class EnemySqawn : MonoBehaviour
         else
         {
             delayTime -= Time.deltaTime;
-            UIManager.Instance.UpdateTime(curTime, maxTime);
         }
+        UIManager.Instance.UpdateTime(curTime, maxTime);
     }
 
     public void SpawnEnemy()
