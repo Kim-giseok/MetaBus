@@ -7,16 +7,10 @@ public class EnemySqawn : MonoBehaviour
     [SerializeField] GameObject[] enemyPrefebs;
     Rigidbody2D _rigEnemy;
 
-    float delayTime = 3;
+    float delayTime = 2f;
 
     const float maxTime = 30;
     float curTime = maxTime;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -31,7 +25,8 @@ public class EnemySqawn : MonoBehaviour
 
         if (delayTime <= 0)
         {
-            SpawnEnemy();
+            for (int i = 1; i <= Random.Range(1, 4); i++)
+                SpawnEnemy();
             delayTime = Random.Range(3f, 6f);
         }
         else
