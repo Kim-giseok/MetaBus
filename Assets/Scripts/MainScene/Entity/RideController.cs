@@ -5,6 +5,11 @@ using UnityEngine.InputSystem;
 
 public class RideController : BaseController
 {
+    public void Init(Vector2 lookDir)
+    {
+        this.lookDir = lookDir;
+    }
+
     protected override void FixedUpdate()
     { }
 

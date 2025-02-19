@@ -34,7 +34,10 @@ public class PlayerController : BaseController
             if (rideHandler == null)
             {
                 if (ridePrefeb != null)
+                {
                     rideHandler = Instantiate(ridePrefeb, ridePivot);
+                    rideHandler.Init(lookDir);
+                }
             }
             else
                 Destroy(rideHandler.gameObject);
