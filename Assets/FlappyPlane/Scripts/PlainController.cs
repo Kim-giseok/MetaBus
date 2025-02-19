@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PlainController : BaseController
 {
@@ -43,13 +45,15 @@ public class PlainController : BaseController
             else
                 GM.GameOver();
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            {
-                isFlap = true;
-            }
-        }
+    }
+
+    void OnFire(InputValue inputValue)
+    {
+        if (!inputValue.isPressed || EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (!isDead)
+            isFlap = true;
     }
 
     protected override void Movement(Vector2 dir)
