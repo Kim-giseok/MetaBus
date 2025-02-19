@@ -6,20 +6,20 @@ using UnityEngine.InputSystem;
 public class CusorController : MonoBehaviour
 {
     GameManager GM;
-    Camera camera;
+    Camera mainCamera;
 
     bool isAttack = false;
 
     void Start()
     {
-        camera = Camera.main;
+        mainCamera = Camera.main;
         GM = GameManager.instance;
     }
 
     void OnLook(InputValue inputValue)
     {
         Vector2 mousePosition = inputValue.Get<Vector2>();
-        Vector2 worldPos = camera.ScreenToWorldPoint(mousePosition);
+        Vector2 worldPos = mainCamera.ScreenToWorldPoint(mousePosition);
 
         transform.position = worldPos;
     }
