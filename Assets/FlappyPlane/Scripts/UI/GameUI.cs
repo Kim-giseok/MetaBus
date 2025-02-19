@@ -19,4 +19,8 @@ public class GameUI : BaseUI
     {
         scoreTxt.text = score.ToString();
     }
+
+    public virtual void SetTimeUI(float time, float maxTime)
+    {
+    }
 }

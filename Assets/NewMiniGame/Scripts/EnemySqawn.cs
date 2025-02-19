@@ -21,7 +21,7 @@ public class EnemySqawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (curTime < 0)
+        if (curTime <= 0)
         {
             curTime = 0;
             GameManager.instance.GameOver();
@@ -37,6 +37,7 @@ public class EnemySqawn : MonoBehaviour
         else
         {
             delayTime -= Time.deltaTime;
+            UIManager.Instance.UpdateTime(curTime, maxTime);
         }
     }
 

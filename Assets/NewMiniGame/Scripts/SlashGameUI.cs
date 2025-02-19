@@ -15,8 +15,8 @@ public class SlashGameUI : GameUI
         timeSlider = transform.Find("TimeUI").GetComponentInChildren<Slider>();
     }
 
-    public void SetTimeUI(int time)
+    public override void SetTimeUI(float time, float maxTime)
     {
-        timeSlider.value = time;
+        timeSlider.value = time/maxTime;
     }
 }
