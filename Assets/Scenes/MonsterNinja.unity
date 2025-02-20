@@ -561,6 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slashParticle: {fileID: 2065725890}
+  particleControl: {fileID: 1813638556}
 --- !u!114 &152184650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,10 +2881,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1813638554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea404662cb78044a9fae429c8b8fced, type: 3}
+  m_Script: {fileID: 11500000, guid: 95cea0f02d49f0441bdcc6f603be28ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactParticleSys: {fileID: 2098069001}
+  createDustOnWalk: 1
+  ParticleSys: {fileID: 2098069001}
 --- !u!1 &1921038179
 GameObject:
   m_ObjectHideFlags: 0
