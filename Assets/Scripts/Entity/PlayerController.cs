@@ -32,13 +32,9 @@ public class PlayerController : BaseController
 
     void OnFire(InputValue inputValue)
     {
-        if (!inputValue.isPressed)
+        if (!inputValue.isPressed||EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
-
-        animHandller.RideOn();
         if (rideHandler == null)
         {
             if (ridePrefeb == null)
@@ -46,6 +42,7 @@ public class PlayerController : BaseController
 
             rideHandler = Instantiate(ridePrefeb, ridePivot);
             rideHandler.Init(lookDir);
+
             statHanddler.Speed = rideHandler.GetComponent<StatHandler>().Speed;
             characterRenderer.transform.localPosition += ridePivot.localPosition;
         }
@@ -55,5 +52,6 @@ public class PlayerController : BaseController
             statHanddler.Speed = baseSpeed;
             characterRenderer.transform.localPosition -= ridePivot.localPosition;
         }
+        animHandller.RideOn();
     }
 }
