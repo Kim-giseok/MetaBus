@@ -10,6 +10,8 @@ public class CusorController : MonoBehaviour
 
     bool isAttack = false;
 
+    [SerializeField] ParticleSystem slashParticle;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -27,6 +29,10 @@ public class CusorController : MonoBehaviour
     void OnFire(InputValue inputValue)
     {
         isAttack = inputValue.isPressed;
+        if (isAttack)
+            slashParticle.Play();
+        else
+            slashParticle.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +40,7 @@ public class CusorController : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (isAttack)
         {
+            ParticleManager.Instance.ParitclesAtPosition(collision.transform.position);
             Destroy(collision.gameObject);
             GM.AddScore(1);
         }
