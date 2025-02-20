@@ -19,10 +19,13 @@ public class ParticleControl : MonoBehaviour
     public void ParitclesAtPosition(Vector3 position)
     {
         ParticleSys.transform.position = position;
+
         ParticleSystem.EmissionModule em = ParticleSys.emission;
         em.SetBurst(0, new ParticleSystem.Burst(0, Mathf.Ceil(5)));
+
         ParticleSystem.MainModule mainModule = ParticleSys.main;
         mainModule.startSpeedMultiplier = 10f;
+
         ParticleSys.Play();
     }
 }
