@@ -21522,7 +21522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createDustOnWalk: 1
-  dustParticleSystem: {fileID: 1056624672}
+  ParticleSys: {fileID: 1056624672}
 --- !u!1 &1591924644
 GameObject:
   m_ObjectHideFlags: 0

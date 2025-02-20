@@ -5114,4 +5114,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createDustOnWalk: 1
-  dustParticleSystem: {fileID: 4959161378974711435}
+  ParticleSys: {fileID: 4959161378974711435}
