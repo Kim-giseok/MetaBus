@@ -546,6 +546,12 @@ MonoBehaviour:
   RedSlider: {fileID: 881216664}
   GreenSlider: {fileID: 1997600167}
   BlueSlider: {fileID: 342586553}
+  animSets:
+  - idle: {fileID: 7400000, guid: ac328593327514b4d99df2933463d9ad, type: 2}
+    move: {fileID: 7400000, guid: 7a869b1617dfcd84d81ae704b823e580, type: 2}
+  - idle: {fileID: 7400000, guid: 884d984938008394ea32717fd167f65b, type: 2}
+    move: {fileID: 7400000, guid: fe12c3329902d68479f15d672b05fb51, type: 2}
+  anim: {fileID: 22100000, guid: d683c37700346e94d981b699a5d07d46, type: 2}
 --- !u!1 &183817924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,8 +3378,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2116169104}
   - {fileID: 1641081703}
+  - {fileID: 2116169104}
   m_Father: {fileID: 86000443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -21758,7 +21764,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1641081703}
   - component: {fileID: 1641081705}
-  - component: {fileID: 1641081704}
   m_Layer: 5
   m_Name: Knight
   m_TagString: Untagged
@@ -21787,21 +21792,6 @@ RectTransform:
   m_AnchoredPosition: {x: -125, y: 50}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1641081704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641081702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb109a38a1dacd48bb47f839f80d32c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 22100000, guid: d683c37700346e94d981b699a5d07d46, type: 2}
-  idle: {fileID: 7400000, guid: ac328593327514b4d99df2933463d9ad, type: 2}
-  move: {fileID: 7400000, guid: 7a869b1617dfcd84d81ae704b823e580, type: 2}
 --- !u!114 &1641081705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21846,10 +21836,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1641081704}
-        m_TargetAssemblyTypeName: JobChangeBtn, Assembly-CSharp
+      - m_Target: {fileID: 150981637}
+        m_TargetAssemblyTypeName: PlayerResource, Assembly-CSharp
         m_MethodName: ChangeJob
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24460,7 +24450,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2116169104}
   - component: {fileID: 2116169106}
-  - component: {fileID: 2116169105}
   m_Layer: 5
   m_Name: Wizzard
   m_TagString: Untagged
@@ -24489,21 +24478,6 @@ RectTransform:
   m_AnchoredPosition: {x: 125, y: 50}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2116169105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116169103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb109a38a1dacd48bb47f839f80d32c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 22100000, guid: d683c37700346e94d981b699a5d07d46, type: 2}
-  idle: {fileID: 7400000, guid: 884d984938008394ea32717fd167f65b, type: 2}
-  move: {fileID: 7400000, guid: fe12c3329902d68479f15d672b05fb51, type: 2}
 --- !u!114 &2116169106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24548,14 +24522,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2116169105}
-        m_TargetAssemblyTypeName: JobChangeBtn, Assembly-CSharp
+      - m_Target: {fileID: 150981637}
+        m_TargetAssemblyTypeName: PlayerResource, Assembly-CSharp
         m_MethodName: ChangeJob
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

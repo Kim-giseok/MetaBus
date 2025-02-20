@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,15 @@ public class PlayerResource : MonoBehaviour
     [SerializeField] Slider RedSlider;
     [SerializeField] Slider GreenSlider;
     [SerializeField] Slider BlueSlider;
+
+    [Serializable]
+    public struct AnimSet
+    {
+        public AnimationClip idle;
+        public AnimationClip move;
+    }
+    [SerializeField] AnimSet[] animSets;
+    [SerializeField] AnimatorOverrideController anim;
 
     private void Awake()
     {
@@ -25,5 +35,11 @@ public class PlayerResource : MonoBehaviour
     public void ColorChange()
     {
         sprite.color = new Color(RedSlider.value, GreenSlider.value, BlueSlider.value);
+    }
+
+    public void ChangeJob(int idx)
+    {
+        anim["Idle"] = animSets[idx].idle;
+        anim["Move"] = animSets[idx].move;
     }
 }
