@@ -5,15 +5,15 @@ using UnityEngine;
 public class MapCameraControl : MonoBehaviour
 {
     public Transform target;
-    float offsetX, offsetY;
+    [SerializeField] float offsetX, offsetY;
 
     // Start is called before the first frame update
     void Start()
     {
         if (target == null) return;
 
-        offsetX = transform.position.x - target.position.x;
-        offsetY = transform.position.y - target.position.y;
+        Vector3 pos = new Vector3(target.position.x + offsetX, target.position.y + offsetY, transform.position.z);
+        transform.position = pos;
     }
 
     // Update is called once per frame

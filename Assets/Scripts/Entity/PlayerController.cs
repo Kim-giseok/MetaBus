@@ -20,6 +20,7 @@ public class PlayerController : BaseController
         base.Start();
         mainCamera = Camera.main;
         baseSpeed = statHanddler.Speed;
+        transform.position = EnterPoint.enterPoint;
     }
 
     void OnMove(InputValue inputValue)
