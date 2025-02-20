@@ -3150,6 +3150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: MonsterNinja
+  enterPoint: {x: 18.5, y: -2}
 --- !u!1 &279863725
 GameObject:
   m_ObjectHideFlags: 0
@@ -15968,6 +15969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: FlappyPlane
+  enterPoint: {x: 1, y: 3}
 --- !u!1 &1034182744
 GameObject:
   m_ObjectHideFlags: 0
