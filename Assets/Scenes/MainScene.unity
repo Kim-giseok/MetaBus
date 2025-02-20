@@ -543,9 +543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c471d69df4d0fb479ac233ebb91c69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedSlider: {fileID: 881216664}
-  GreenSlider: {fileID: 1997600167}
-  BlueSlider: {fileID: 342586553}
   animSets:
   - idle: {fileID: 7400000, guid: ac328593327514b4d99df2933463d9ad, type: 2}
     move: {fileID: 7400000, guid: 7a869b1617dfcd84d81ae704b823e580, type: 2}
@@ -3349,7 +3346,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150981637}
+        m_TargetAssemblyTypeName: PlayerResource, Assembly-CSharp
+        m_MethodName: ChangeBlue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 342586553}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &416248566
 GameObject:
   m_ObjectHideFlags: 0
@@ -15607,7 +15616,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150981637}
+        m_TargetAssemblyTypeName: PlayerResource, Assembly-CSharp
+        m_MethodName: ChangeRed
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 881216664}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &904051776
 GameObject:
   m_ObjectHideFlags: 0
@@ -24364,7 +24385,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150981637}
+        m_TargetAssemblyTypeName: PlayerResource, Assembly-CSharp
+        m_MethodName: ChangeGreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1997600167}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2045456758
 GameObject:
   m_ObjectHideFlags: 0
