@@ -11,6 +11,7 @@ public class CusorController : MonoBehaviour
     bool isAttack = false;
 
     [SerializeField] ParticleSystem slashParticle;
+    [SerializeField] ParticleControl particleControl;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class CusorController : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (isAttack)
         {
-            ParticleManager.Instance.ParitclesAtPosition(collision.transform.position);
+            particleControl.ParitclesAtPosition(collision.transform.position);
             Destroy(collision.gameObject);
             GM.AddScore(1);
         }
