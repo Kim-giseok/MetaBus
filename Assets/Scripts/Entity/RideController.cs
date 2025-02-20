@@ -10,8 +10,9 @@ public class RideController : BaseController
         this.lookDir = lookDir;
     }
 
-    protected virtual void FixedUpdate()
+    protected override void FixedUpdate()
     {
+        //BaseController의 Movement를 동작하지 않게 하기 위한 오버라이드 입니다.
     }
 
     void OnMove(InputValue inputValue)
