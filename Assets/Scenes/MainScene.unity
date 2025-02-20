@@ -236,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 10811598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.48, y: -0.93, z: 0}
+  m_LocalPosition: {x: 16.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3150,7 +3150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: MonsterNinja
-  enterPoint: {x: 18.5, y: -2}
+  enterPoint: {x: 18.5, y: -1.5}
 --- !u!1 &279863725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,6 +3683,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 150981632}
+  offsetX: 0
+  offsetY: 0
 --- !u!1 &528865114
 GameObject:
   m_ObjectHideFlags: 0
@@ -15969,7 +15971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameName: FlappyPlane
-  enterPoint: {x: 1, y: 3}
+  enterPoint: {x: 1, y: 3.5}
 --- !u!1 &1034182744
 GameObject:
   m_ObjectHideFlags: 0
