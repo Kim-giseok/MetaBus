@@ -34,6 +34,7 @@ public class CusorController : MonoBehaviour
         Debug.Log(collision.gameObject.name);
         if (isAttack)
         {
+            ParticleManager.Instance.ParitclesAtPosition(collision.transform.position);
             Destroy(collision.gameObject);
             GM.AddScore(1);
         }
