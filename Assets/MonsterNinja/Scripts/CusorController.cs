@@ -10,6 +10,8 @@ public class CusorController : MonoBehaviour
 
     bool isAttack = false;
 
+    [SerializeField] ParticleSystem slashParticle;
+
     void Start()
     {
         mainCamera = Camera.main;
@@ -27,6 +29,10 @@ public class CusorController : MonoBehaviour
     void OnFire(InputValue inputValue)
     {
         isAttack = inputValue.isPressed;
+        if (isAttack)
+            slashParticle.Play();
+        else
+            slashParticle.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
